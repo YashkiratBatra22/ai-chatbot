@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AI Chatbot</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ambient background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="app">
+    <main class="chat-card">
+
+      <header class="chat-header">
+        <div class="bot-identity">
+          <div class="orb" id="orb" aria-hidden="true">
+            <span class="orb-core"></span>
+          </div>
+          <div class="bot-meta">
+            <h1 class="bot-name">AI Assistant</h1>
+            <p class="bot-status">
+              <span class="status-dot" id="statusDot"></span>
+              <span id="statusText">Online</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme"
+            aria-label="Toggle dark and light mode">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+          <button class="icon-btn" id="clearChat" type="button" title="Clear conversation"
+            aria-label="Clear conversation">
+            <i class="fa-solid
