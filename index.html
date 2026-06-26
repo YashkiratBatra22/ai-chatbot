@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>AI Chatbot</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>AI Chatbot</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+  rel="stylesheet"
+/>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
 
-  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <!-- ambient background grid -->
   <div class="bg-grid" aria-hidden="true"></div>
@@ -41,10 +43,43 @@
         </div>
 
         <div class="header-actions">
-          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme"
-            aria-label="Toggle dark and light mode">
+          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle dark and light mode">
             <i class="fa-solid fa-moon" id="themeIcon"></i>
           </button>
-          <button class="icon-btn" id="clearChat" type="button" title="Clear conversation"
-            aria-label="Clear conversation">
-            <i class="fa-solid
+          <button class="icon-btn" id="clearChat" type="button" title="Clear conversation" aria-label="Clear conversation">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+      <div class="typing-row" id="typingRow" hidden>
+        <div class="message bot">
+          <div class="bubble typing-bubble" aria-label="AI is typing">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <form class="input-area" id="chatForm">
+        <input
+          type="text"   
+          id="messageInput"
+          placeholder="Type your message…"
+          autocomplete="off"
+          maxlength="500"
+          aria-label="Type a message"
+        />
+        <button type="submit" class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <p class="disclaimer">This is a demo assistant — replies are rule-based, not a real AI model.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
