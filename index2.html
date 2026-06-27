@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Nova — AI Chat Assistant</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ambient background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="app">
+    <main class="chat-card">
+
+      <header class="chat-header">
+        <div class="bot-identity">
+          <div class="orb" id="orb" aria-hidden="true">
+            <span class="orb-core"></span>
+          </div>
+          <div class="bot-meta">
+            <h1 class="bot-name">Nova</h1>
+            <p class="bot-status">
+              <span class="status-dot" id="statusDot"></span>
+              <span id="statusText">Online</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="icon-btn" id="themeToggle" type="button" title="Toggle theme" aria-label="Toggle dark and light mode">
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+          <button class="icon-btn" id="clearChat" type="button" title="Clear conversation" aria-label="Clear conversation">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+      <div class="typing-row" id="typingRow" hidden>
+        <div class="message bot">
+          <div class="bubble typing-bubble" aria-label="Nova is typing">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <form class="input-area" id="chatForm">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Message Nova…"
+          autocomplete="off"
+          maxlength="2000"
+          aria-label="Type a message"
+        />
+        <button type="submit" class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <p class="disclaimer">Nova is powered by the Gemini API and can make mistakes — double-check anything important.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

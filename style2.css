@@ -1,0 +1,45 @@
+Hey act like a professional web designer 
+
+So the main concept and the main project is to create a AI chat bot on Visual Studio code
+
+So we have to create a AI chat bot with clean and smooth transitions and The structure would be like
+
+chatbot-interface/ 
+1. Index.html
+2.style.css
+3.script.js
+
+Detailed requirements
+HTML File (index.html)
+1. Input section with text input and send buttion 
+2. Font awesome CDN for icons
+3. Main container for the chat bot
+4. Linked to external CSS and JavaScript files
+5. Rest of all the things which you thing would you thing are essesntial
+
+CSS file (style.css)
+Requirements
+1. Neat and minimalist look
+2. futuristic and more attractive
+3. Dark theme
+4. smooth colours and smooth transitions
+5. Smooth animations
+6. Works on mobile as well as desktop 
+
+JavaScript file (script.js)
+Requirements 
+1. Add new message to the chat
+2. Auto responses
+3. Typing animations should be smooth
+4. Can switch Dark and light  modes
+5. Remember the users data
+6. Auto scroll
+6. Send message or enter key press
+
+File organizing instructions
+1. index.html (HTML structure)
+2. style.css (All CSS styles)
+3. script.js (Complete JavaScript functionality)
+
+Final result expectations
+ The final project should be a functioning working model AI chat bot with futuristic looks and smooth transitions and theme switching capabilities.
