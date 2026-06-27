@@ -28,7 +28,7 @@
 const part2 = "TGa79wHBp2FA-JKovZJ";
 const part3 = "jRGz7mvkVNPuu10Q";
 
-const API_KEY = part1 + part2 + part3;
+const GEMINI_API_KEY= part1 + part2 + part3;
   const GEMINI_MODEL = 'gemini-2.5-flash'; // free-tier model
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
   const MAX_CONTEXT_TURNS = 20; // cap how much history is sent per request
